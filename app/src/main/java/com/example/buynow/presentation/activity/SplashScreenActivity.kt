@@ -26,23 +26,21 @@ class SplashScreenActivity : AppCompatActivity() {
     }
 
     private fun checkUser() {
-        /*
         if(FirebaseUtils.firebaseUser?.isEmailVerified == true){
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
         }
-*/
-//        if(FirebaseUtils.firebaseUser != null){
+        if(FirebaseUtils.firebaseUser != null){
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
         finish()
-//        }
-//        if(FirebaseUtils.firebaseUser == null){
-//            val intent = Intent(this, LoginActivity::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
+        }
+        if(FirebaseUtils.firebaseUser == null){
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
     }
 }
